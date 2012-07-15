@@ -1,4 +1,6 @@
-Plugins-for-SCOTXblog
+Plugins for SCOTXblog
 =====================
 
-A set of Wordpress plugins that I use on the blog
+A set of simple Wordpress plugins
+-----------------------------
+
