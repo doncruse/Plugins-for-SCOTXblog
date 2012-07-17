@@ -2,7 +2,9 @@
 /*
 Plugin Name: Dallas COA Remap
 Plugin URI: http://www.scotxblog.com
-Description: This is a tiny plugin to remap hyperlinks to the new Dallas Court of Appeals domain, which has URLs in the 5th.txcourts.gov namespace.
+Description: This is a tiny plugin to remap hyperlinks to the new
+										Dallas Court of Appeals domain, which has URLs in 
+										the 5th.txcourts.gov namespace.
 Version: 1.0
 Author: Don Cruse
 Author URI: http://doncruse.com

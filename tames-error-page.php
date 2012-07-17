@@ -2,7 +2,12 @@
 /*
 Plugin Name: Tames Error Page Remap
 Plugin URI: http://www.scotxblog.com
-Description: This is a private plugin to remap broken links that would otherwise go to defunct Texas court websites back to an explanation/error page on my own domain.
+Description: This is a private plugin to remap broken Fourteenth Court links 
+										to an explanation/error page hosted on SCOTXblog.
+										
+										Please feel free to modify to point to an error page of your choice.
+										One idea is to remap this to point at the webpage for the TAMES search
+										window, which would give the reader a head start on finding the case.
 Version: 1.0
 Author: Don Cruse
 Author URI: http://doncruse.com
