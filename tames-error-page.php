@@ -2,20 +2,11 @@
 /*
 Plugin Name: Tames Error Page Remap
 Plugin URI: http://www.scotxblog.com
-Description: This is a private plugin to remap broken Fourteenth Court links 
-										to an explanation/error page hosted on SCOTXblog.
-										
-										Please feel free to modify to point to an error page of your choice.
-										One idea is to remap this to point at the webpage for the TAMES search
-										window, which would give the reader a head start on finding the case.
+Description: This is a private plugin to remap old Dallas COA urls to the 5th.txcourts.gov namespace.
 Version: 1.0
 Author: Don Cruse
 Author URI: http://doncruse.com
-License: Copyright 2012
-*/
-
-/*
-This is implemented as an array so that I can add additional URL patterns as the other courts of appeals transition to TAMES -- if those migrations also break the old pages.  It's not clear whether the courts will eventually start redirecting these web addresses on their own.
+License: (C)2012 All Rights Reserved
 */
 
 function coa_remap_to_tames_error($content) {
