@@ -20,6 +20,11 @@ recent summary of the case, as entered into the docket database.
 and docket number. Used for inline text. *Note: will only render once in a
 given paragraph*
 
+### bulk-resave-action
+
+This adds a bulk action to the Posts screen that forces a re-save of the
+selected posts, triggering the "save" callbacks.
+
 ## Older plugins, which adapted to previous changes to the SCOTX website
 
 Some of these fire to API calls on my own docket server, which (among other
