@@ -12,33 +12,33 @@ License: (C)2018 All Rights Reserved
 add_filter( 'bulk_actions-edit-post', 'register_my_bulk_actions' );
 
 function register_my_bulk_actions($bulk_actions) {
-  $bulk_actions['email_to_eric'] = __( 'Email to Eric', 'email_to_eric');
+  $bulk_actions['force_resave_posts'] = __( 'Trigger Save Callbacks', 'force_resave_posts');
   return $bulk_actions;
 }
 
 add_filter( 'handle_bulk_actions-edit-post', 'my_bulk_action_handler', 10, 3 );
 
 function my_bulk_action_handler( $redirect_to, $doaction, $post_ids ) {
-  if ( $doaction !== 'email_to_eric' ) {
+  if ( $doaction !== 'force_resave_posts' ) {
     return $redirect_to;
   }
   foreach ( $post_ids as $post_id ) {
     // Perform action for each post.
   }
-  $redirect_to = add_query_arg( 'bulk_emailed_posts', count( $post_ids ), $redirect_to );
+  $redirect_to = add_query_arg( 'posts_resaved', count( $post_ids ), $redirect_to );
   return $redirect_to;
 }
 
 add_action( 'admin_notices', 'my_bulk_action_admin_notice' );
 
 function my_bulk_action_admin_notice() {
-  if ( ! empty( $_REQUEST['bulk_emailed_posts'] ) ) {
-    $emailed_count = intval( $_REQUEST['bulk_emailed_posts'] );
+  if ( ! empty( $_REQUEST['posts_resaved'] ) ) {
+    $saved_count = intval( $_REQUEST['posts_resaved'] );
     printf( '<div id="message" class="updated fade">' .
-      _n( 'Emailed %s post to Eric.',
-        'Emailed %s posts to Eric.',
-        $emailed_count,
-        'email_to_eric'
-      ) . '</div>', $emailed_count );
+      _n( 'Forced save callbacks on %s posts.',
+        'Forced save callbacks on %s posts.',
+        $saved_count,
+        'force_resave_posts'
+      ) . '</div>', $saved_count );
   }
 }
