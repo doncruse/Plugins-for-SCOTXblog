@@ -23,7 +23,10 @@ function my_bulk_action_handler( $redirect_to, $doaction, $post_ids ) {
     return $redirect_to;
   }
   foreach ( $post_ids as $post_id ) {
-    // Perform action for each post.
+    $my_post = array(
+      'ID' => $post_id
+    );
+    wp_update_post( $my_post );
   }
   $redirect_to = add_query_arg( 'posts_resaved', count( $post_ids ), $redirect_to );
   return $redirect_to;
