@@ -3,10 +3,10 @@
 Plugin Name: Case Updates - Development Plugin
 Plugin URI: https://www.scotxblog.com
 Description: Working on the Case Updates functionality in SCOTXblog, to be used to seed the database (and to see whether this is a viable input method).
-Version: 0.1
+Version: 0.5
 Author: Don Cruse
 Author URI: https://texasappellate.com
-License: Copyright 2012
+License: Copyright 2018
 */
 
 
